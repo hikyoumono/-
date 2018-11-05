@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";charset="UTF-8" />
+<title>診断中</title>
+</head>
+<body>
+<h1>診断</h1>
+<form action="kekka.php" method="post">
+<p>身長</p>
+<input type="number" name="sintyou" placeholder="身長"/>
+<p>体重</p>
+<input type="number" name="taiju" placeholder="体重"/>
+<p>性別</p>
+<label>男<input type="radio" name="seibetu" value=1 checked="check"/></label>
+<label>女<input type="radio" name="seibetu" value=2/></label>
+<p>利き手</p>
+右手<input type="radio" name="kikite" value=1 checked="check"/>
+左手<input type="radio" name="kikite" value=2 />
+<p>年齢が10歳以下、もしくは、10歳以下の子供との接触が週に1回以上ある</p>
+<label>有<input type="radio" name="tosi" value=1 checked="check"/></label>
+<label>無<input type="radio" name="tosi" value=2/></label>
+<p>熱はありますか</p>
+<label>なし<input type="radio" name="netu" checked="check" value=1/></label>
+<label>あり<input type="radio" name="netu" value=2/></label>
+<p>現在の体調</p>
+<div class="taityou">
+<label><input type="checkbox" name="taityou" value=1 checked="check"/>良い</label>
+<label><input type="checkbox" name="taityou" value=2>頭痛(右)</label>
+<label><input type="checkbox" name="taityou" value=3>頭痛(左)</label>
+<label><input type="checkbox" name="taityou" value=4>頭痛(前)</label>
+<label><input type="checkbox" name="taityou" value=5>めまい</label>
+<label><input type="checkbox" name="taityou" value=6>のどが痛い</label>
+<label><input type="checkbox" name="taityou" value=7>鼻水が出る</label>
+<label><input type="checkbox" name="taityou" value=8>耳の異常</label>
+</div>
+<p>昨日、もしくは今日お酒を飲んだ</p>
+<label>有<input type="radio" name="sake" checked="check"/><label>
+<label>無<input type="radio" name="sake"/><label>
+<p>気分</p>
+<label>良い<input type="radio" name="kibun" checked="check"/></label>
+<label>悪い<input type="radio" name="kibun"/></label>
+
+<br><input type="submit" value="診断"/>
+</form>
+</body>
+</html>

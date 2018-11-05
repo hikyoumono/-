@@ -1,0 +1,35 @@
+body{
+
+}
+.main{
+width:80%;
+margin:0 auto;
+margin-top:50px;
+margin-bottom:100px;
+padding-left:10px;
+padding-bottom:50px;
+background-color:orange;
+}
+
+.tag{
+width:90%;
+font-size:21px;
+padding-left:5px;
+margin-top:0.3px;
+background-color:#dfdfdf;
+border:2px solid #eee;
+border-radius:4px 4px 4px 4px/4px 4px 4px 4px;
+}
+.button1{
+margin-left:15px;
+display:inline;
+}
+.button2{
+position:absolute;
+top:165px;
+left:150px;
+}
+
+p{
+margin-bottom:50px;
+}

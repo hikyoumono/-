@@ -1,0 +1,3 @@
+create table uketuke(id int not null primary key auto_increment,username varchar(36),seibetu varchar(36),nenn varchar(36),tuki varchar(36), day varchar(36),bikou varchar(255));
+
+ insert into kekka values(2,'片頭痛','脳の片側だけが脈打つように痛い病気、気圧や音に影響されるといわれている。適度なカフェインが良い。市販薬を買う場合は必ず店の人や医者と相談しよう','','2','2','2','1');

@@ -1,0 +1,32 @@
+.main{
+margin-top:100px;
+margin-left:30%;
+margin-right:30%;
+width:40%;
+height:300px;
+border:5px solid lightgray;
+background-color:orange;
+}
+
+h1{
+margin-top:10px;
+margin-left:160px;
+padding-left:10px;
+border-left:3px solid red;
+}
+
+p{
+padding-left:175px;
+}
+
+.sub{
+margin-top:100px;
+margin-left:225px;
+padding-top:7px;
+padding-bottom:7px;
+}
+
+.error{
+color:red;
+margin-left:200px;
+}

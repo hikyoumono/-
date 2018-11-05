@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html";charset="UTF-8" />
+<title>受付画面</title>
+<link rel ="stylesheet" type="text/css" href="styleuketuke.css">
+</head>
+<body>
+<h1>受付</h1>
+<p>必要事項を入力して下さい</p>
+<form method="post" action="ukekan.php">
+<div class="waku">名前
+<input type="text" name="username" size="50">
+</div>
+<br>
+<div class="waku">性別
+<input type="radio" value="0" name="seibetu" checked="checked">男
+<input type="radio" value="1" name="seibetu">女
+</div>
+<br>
+<div class="waku">生年月日
+<select name="nenn">
+<option value="nenn">年</option>
+
+<script>
+for(var i = 1940; i<= 2020;i++){
+document.write("<option value='" + i + "'>" + i + "</option>");
+}
+</script>
+</select>
+
+<select name="tuki">
+<option value="tuki">月</option>
+<script>
+for(var i = 1; i<= 12;i++){
+document.write("<option value='" + i + "'>" + i + "</option>");
+}
+</script>
+</select>
+
+<select name="day">
+<option value="nenn">日</option>
+<script>
+for(var i = 1; i<= 31;i++){
+document.write("<option value='" + i + "'>" + i + "</option>");
+}
+</script>
+</select>
+</div>
+<br>
+
+<div class="waku"><br>要望<br>
+<textarea name="bikou" rows="5" cols="50" size="250" placeholder="ご要望であるなら何でも構いません"></textarea>
+</div>
+<br>
+<br>
+<div class="sub">
+<input type="submit" value="登録">
+</div>
+</form>
+</body>
+</html>
