@@ -46,9 +46,9 @@ background-color:black;
 }
 
 ul{
-position:relative;
-top:-336px;
-left:10px;
+position:absolute;
+top:92px;
+left:930px;
 }
 
 li{
@@ -65,4 +65,11 @@ color:red;
 }
 a:hover{
 color:yellow;
+}
+
+
+body{
+background-image:url('hana.png');
+
+
 }

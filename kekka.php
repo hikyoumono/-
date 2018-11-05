@@ -6,44 +6,46 @@ $stmt=$pdo->exec("insert into bigdata(sintyou,taiju,seibetu,kikite,tosi,netu,tai
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<
+<meta http-equiv="Content-Type" content="text/html";charset="UTF-8" />
 </head>
 <body>
-<P>f’fŒ‹‰Ê</p>
+<P>è¨ºæ–­çµæœ</p>
 <?php
-int BMI =$_POST['taiju'] / $_POST['sintyou'] * $_POST['sintyou'];
-if(BMI<=15){
-echo "‘‰‚¹‚·‚¬‚Å‚Í‚È‚¢‚Å‚µ‚å‚¤‚©BOH‚«‚¿‚Á‚ÆH‚×‚é‚æ‚¤‚É‚µ‚Ü‚µ‚å‚¤B";
-}else if(BMI>15 && BMI<25){
-
+$BMI =$_POST['taiju'] / ($_POST['sintyou'] * $_POST['sintyou']);
+if($BMI<=15){
+echo "ç—©ã›ã™ãã§ã¯ãªã„ã§ã—ã‚‡ã†ã‹ã€‚ä¸‰é£Ÿãã¡ã£ã¨é£Ÿã¹ã‚‹ã‚ˆã†ã«ã—ã¾ã—ã‚‡ã†ã€‚";
+}else if($BMI>15 && $BMI<25){
+echo "æ¯”è¼ƒçš„å¥åº·çš„ãªä½“ç³»ã§ã™ã€‚";
 }else{
-echo "”ì–ŒXŒü‚Å‚·BH‚×‚·‚¬‚É‚Í’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢B";
+echo "è‚¥æº€å‚¾å‘ã§ã™ã€‚é£Ÿã¹ã™ãã«ã¯æ³¨æ„ã—ã¦ãã ã•ã„ã€‚";
 }
 ?>
 
 
 <?php
-boolean flg=false;
+$flg=true;
 
 
 if($_POST['taityou']==2 && $_POST['taityou']==3){
-$stmt =$pdo->query(select * from kekka where taityou=2 and taityou=3;");
-}else if($_POST['taityou']==2 || $_POST['taityou]==3 || $_POST['taityou']==4){
-$stmt =$pdo->query(select * from kekka where taityou=2);
+$stmt =$pdo->query("select * from kekka where taityou=2 and taityou=3");
+$flg=false;
+}else if($_POST['taityou']==2 || $_POST['taityou']==3 || $_POST['taityou']==4){
+$stmt =$pdo->query("select * from kekka where taityou=2");
+$flg=false;
 }
 
 if($_POST['taityou']==5 ){
 if($_POST['sake']==1){
 $stmt =$pdo->query("select * from kekka where taityou=5 and sake=1;");
+$flg=false;
 }
 else if($_POST['netu']==2){
 $stmt =$pdo->query("select * from kekka where taityou=5 and netu=2");
-}
-else if($_POST['taityou']==2 || $_POST['taityou']==3 || $_POST['taityou']==4 && $_POST['netu']==2){
-$stmt =$pdo->query("select * from kekka where taityou=5 taityou=2 netu=2");
+$flg=false;
 }
 else if($_POST['taityou']==2 || $_POST['taityou']==3 || $_POST['taityou']==4){
 $stmt =$pdo->query("select * from kekka where taityou=5 taityou=2");
+$flg=false;
 }
 }
 
@@ -51,31 +53,35 @@ $stmt =$pdo->query("select * from kekka where taityou=5 taityou=2");
 if($_POST['taityou']==6){
 if($_POST['taityou']==7){
 $stmt =$pdo->query("select * from kekka where taityou=6 taityou=7;");
+$flg=false;
 }else if($_POST['netu']==2){
 $stmt =$pdo->query("select * from kekka where taityou=6 netu=2");
+$flg=false;
 }
+
+
 }
 
 if($_POST['taityou']==7){
 if($_POST['kibun']==2){
-$stmt=$pdo->query("select * from kekka where taityou=7 kibun=2" $_POST['netu'] ==1);
+$stmt=$pdo->query("select * from kekka where taityou=7 kibun=2 netu=1");
+$flg=false;
 }
 else if($_POST['taityou'] !=1 || $_POST['netu'] ==1){
 $stmt=$pdo->query("select * from kekka where taityou=7 ");
+$flg=false;
 }
-flg==true;
 }
 if($_POST['netu']==2){
 $stmt=$pdo->query("select * from kekka where netu=2");
 }
 
-if($_POST['kibun']==1 || $_POST['taityou']==1){
-flg==true;
-}
 
-if(flg==true){
-echo "Œ’N‚Å‚·B<br>•a‹C‚Ì‰Â”\«‚Í‚ ‚è‚Ü‚¹‚ñB";
+
+if($flg==false){
+echo "<br><br>å¥åº·ã§ã™ã€‚<br>ç—…æ°—ã®å¯èƒ½æ€§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚";
 }
+?>
 
 </body>
 </html>
